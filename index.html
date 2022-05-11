@@ -15,14 +15,44 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-
+    <style>
+      #cart-count {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        top: -10px;
+        left: 25px;
+      }
+      #cart-count span {
+        position: absolute;
+        margin-top: -3px;
+        font-weight: bold;
+        left: 6px;
+      }
+      .cart-img {
+        width: 75px;
+        height: 75px;
+        background-size: contain;
+        border-radius: 3px;
+      }
+      .cart-item {
+        padding: 3px;
+        display: flex;
+        margin-bottom: 5px;
+        border-bottom: 1px solid gray;
+      }
+    </style>
     <title>Book shop</title>
   </head>
 
   <body>
-    <div class="container">
+    <div class="container col-12 col-sm 12 col-md-12 col-lg-10">
       <h1>Strive Books</h1>
-      <div class="input-group align-items-start">
+      <div class="input-group align-items-start col-12">
         <input
           type="text"
           class="form-control mb-3"
@@ -42,8 +72,21 @@
             <option value="fantasy">Fantasy</option>
           </select>
         </div>
+        <div class="col-4 d-flex">
+          <div class="col-8"><h5>Cart Section</h5></div>
+          <div class="col-4 position-relative">
+            <img src="./assets/cart2.svg" alt="" />
+            <p id="cart-count"><span>3</span></p>
+          </div>
+        </div>
       </div>
-      <div class="row mx-n2"></div>
+
+      <div class="container d-flex">
+        <div class="row mx-n2 col-8"></div>
+        <div class="row mx-n2 col-4">
+          <ol class="cart-body col-12"></ol>
+        </div>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
